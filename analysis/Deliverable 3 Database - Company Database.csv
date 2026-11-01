@@ -1,0 +1,101 @@
+Company,Industry Vertical,YoY Growth (%),Year Founded,Company Age,Funding Stage,Headcount Low,Headcount High,Average Salary,Bazel Adoption Proof & Source Location
+Nominal,"Defense, Aerospace & Robotics",127,2022,4,Series B,51,200,140,https://jobs.generalcatalyst.com/companies/nominal-2/jobs/87806023-software-engineer-developer-infrastructure-build-systems
+EngFlow,Developer Tools & Cloud,17,2020,6,Series A,11,50,166,https://www.engflow.com/
+Anysphere (Cursor),AI & Data,192,2022,4,Series A,51,200,190,https://www.linkedin.com/posts/ruban-bhatia-697295159_fast-correct-choose-two-bazel-documentation-share-7493485147447570432-ZpV8/
+CoreWeave,Hardware & Infrastructure,67,2017,9,Public,1000,5000,204,https://www.linkedin.com/jobs/view/engineering-manager-developer-experience-at-coreweave-4463062575/
+Glean,AI & Data,35,2019,7,Series D,501,1000,190,https://bazelcon2025.sched.com/event/28lNz/
+Modal,Developer Tools & Cloud,135,2021,5,Series A,201,500,175,https://github.com/modal-labs/modal-client/commit/38db96fdbdd006129c0d6d7779c079c38c7d4b85.patch
+Astranis,"Defense, Aerospace & Robotics",22,2015,11,Series C,501,1000,150,https://www.pantsbuild.org/blog/2022/08/12/astranis-case-study-wrangling-python-in-a-monorepo
+Retool,Developer Tools & Cloud,-11,2017,9,Series C,201,500,180,https://github.com/tryretool/vscode-rde-extension
+Datadog,Developer Tools & Cloud,21,2010,16,Public,1000,5000,185,https://builtindublin.ie/job/senior-software-engineer-bazel-tools/6402456
+Cloudflare,Developer Tools & Cloud,22,2009,17,Public,1000,5000,178,https://blog.cloudflare.com/internal-ai-engineering-stack/
+Snowflake,AI & Data,14,2012,14,Public,5000,10000,180,https://www.snowflake.com/en/engineering-blog/fast-reliable-builds-snowflake-bazel/
+Figma,Enterprise Software,19,2012,14,Late Stage,1000,5000,172,https://github.com/aspect-build/rules_js/discussions/1000
+Anduril Industries,"Defense, Aerospace & Robotics",53,2017,9,Series F,1000,5000,180,https://job-boards.greenhouse.io/andurilindustries/jobs/5231054007
+Canva,Enterprise Software,74,2012,14,Late Stage,1000,5000,160,https://bazel.build/community/users
+Google,AI & Data,1,1998,28,Public,10000,12824,190,https://bazel.build/community/users
+Adobe,Enterprise Software,-1,1982,44,Public,31360,33044,165,https://bazel.build/community/users
+Asana,Enterprise Software,11,2008,18,Public,1000,5000,169,https://bazel.build/community/users
+Ascend.io,AI & Data,-17,2015,11,Series B,51,200,143,https://bazel.build/community/users
+CarGurus,Consumer & Marketplaces,7,2006,20,Public,1000,5000,149,https://bazel.build/community/users
+Compass,Consumer & Marketplaces,5,2012,14,Public,1000,5000,170,https://bazel.build/community/users
+Dropbox,Developer Tools & Cloud,10,2007,19,Public,1000,5000,160,https://bazel.build/community/users
+Etsy,Consumer & Marketplaces,8,2005,21,Public,1000,5000,150,https://bazel.build/community/users
+Flexport,Consumer & Marketplaces,9,2013,13,Late Stage,1000,5000,164,https://flexport.engineering/connecting-bazel-and-junit5-by-transforming-arguments-46440c6ea068
+Lucid Software,Enterprise Software,4,2010,16,Late Stage,1000,5000,130,https://bazel.build/community/users
+Lyft,Automotive & Mobility,4,2012,14,Public,5000,10000,159,https://bazel.build/community/users
+Nvidia,Hardware & Infrastructure,27,1993,33,Public,36000,42000,180,https://bazel.build/community/users
+OpenAI,AI & Data,2,2015,11,Series F,1000,5000,350,https://bazelcon-2026.sessionize.com/session/1272518
+Pinterest,Media & Advertising,11,2010,16,Public,1000,5000,175,https://medium.com/@Pinterest_Engineering/developing-fast-reliable-ios-builds-at-pinterest-part-one-cb1810407b92
+Snap,Media & Advertising,0,2011,15,Public,5000,10000,167,https://eng.snap.com/blog/
+Stripe,Financial Services,24,2010,16,Late Stage,5000,10000,177,https://stripe.com/blog/fast-secure-builds-choose-two
+Tinder,Consumer & Marketplaces,12,2012,14,Public,501,1000,140,https://medium.com/tinder/bazel-hermetic-toolchain-and-tooling-migration-c244dc0d3ae
+Trunk.io,Developer Tools & Cloud,-13,2021,5,Series A,24,59,?,https://trunk.io/merge/trunk-merge-and-bazel
+Uber,Automotive & Mobility,21,2009,17,Public,34000,37800,163,https://eng.uber.com/go-monorepo-bazel/
+SpaceX,"Defense, Aerospace & Robotics",21,2002,24,Public,1000,5000,160,https://conf.bazel.build/2017/schedule
+Robinhood,Financial Services,11,2013,13,Public,1000,5000,170,https://bazelcon2025.sched.com/event/28lOc
+Zoox,Automotive & Mobility,14,2014,12,Series D,1000,5000,169,https://www.itjobswatch.co.uk/find/Bazel-jobs?start=125
+Applied Intuition,Automotive & Mobility,27,2017,9,Series D,1000,5000,175,https://jobs.ashbyhq.com/applied/ab036590-eae9-45ea-9edc-8d7528cdde9d
+SambaNova,AI & Data,-4,2017,9,Series F,201,500,170,https://job-boards.greenhouse.io/sambanovasystems/jobs/5850439004
+DoorDash,Consumer & Marketplaces,9,2013,13,Public,31400,33851,177,https://careersatdoordash.com/blog/distributed-build-service-for-monorepos/
+Agility Robotics,"Defense, Aerospace & Robotics",56,2015,11,Series C,201,500,140,https://github.com/agilityrobotics/rules_nixpkgs/commit/cc0dc055d871ea9e036591e3bbde03ce1726f1b6.patch
+Sibros,Automotive & Mobility,22,2018,8,Late Stage,51,200,70,https://github.com/SibrosTech/bazel/commit/4297a99b037663a6cd0fe0dfa645387c29e863d9.patch
+Wix,Enterprise Software,-8,2006,20,Public,1000,5000,77,https://medium.com/wix-engineering/migrating-to-bazel-from-maven-or-gradle-5-crucial-questions-you-should-ask-yourself-f23ac6bca070
+Chainguard,Developer Tools & Cloud,34,2021,5,Series D,201,500,180,https://github.com/bazelbuild/bazel-central-registry/commit/b46dab200cedfae4383c3d2547e164a3ce41fabe.patch
+Aurora,Automotive & Mobility,12,2017,9,Public,1000,5000,160,https://blog.bazel.build/2023/11/23/bazelcon-2023-recap.html
+Glydways,Automotive & Mobility,21,2016,10,Series C,51,200,140,https://job-boards.greenhouse.io/glydways/jobs/5200159007
+coinbase,Financial Services,-3,2012,14,Public,1000,5000,185,https://www.youtube.com/watch?v=2BgRXmX1X-4
+Salesforce,Enterprise Software,4,1999,27,Public,83334,87000,170,https://bazelcon2025.sched.com/event/28lOx
+Foursquare,Consumer & Marketplaces,2,2009,17,Late stage,501,1000,160,https://bazel.build/community/users
+Plaid,Financial Services,13,2012,14,Series D,501,1000,190,https://plaid.com/blog/hello-bazel/
+Epic Games,Media & Advertising,3,1991,35,Late Stage,1000,5000,145,https://bazelcon-2026.sessionize.com/session/1270075
+LinkedIn,Media & Advertising,-8,2002,24,Public,16600,22900,203,https://bazel.build/community/users
+Databricks,AI & Data,21,2013,13,Late Stage,5000,10000,185,https://databricks.com/blog/2019/02/27/speedy-scala-builds-with-bazel-at-databricks.html
+Airbnb,Consumer & Marketplaces,15,2008,18,Public,5000,10000,171,https://bazelcon2024.sched.com/event/1h6RX
+Reddit,Media & Advertising,16,2005,21,Public,1000,5000,162,https://www.reddit.com/r/RedditEng/comments/1onkfoa/leveraging_bazel_multiplatform_rbe_for_reddits/
+MongoDB,Developer Tools & Cloud,7,2007,19,Public,5000,10000,170,https://bazelcon2024.sched.com/event/1h6Ra/interoperating-bazel-and-other-build-systems-alexander-neben-zack-winter-mongodb
+Block,Financial Services,-17,2009,17,Public,5000,9243,160,https://www.youtube.com/watch?v=F6K8mu0_ppk
+Sourcegraph,Developer Tools & Cloud,-23,2013,13,Series D,51,200,165,https://github.com/sourcegraph/sourcegraph-public-snapshot
+BenchSci,Healthcare & Biotechnology,-33,2015,11,Series D,201,500,97,https://github.com/bazelbuild/bazel-central-registry/commit/92a7131eedd1ef41fa7fa2b00a70cef51b86efec.patch
+Buf,Developer Tools & Cloud,-20,2020,6,Series B,11,50,205,https://github.com/bazelbuild/bazel-central-registry/commit/1b832ee3b1e7851bcf25e715bf74ccfe5b67215e.patch
+Poolside,AI & Data,30,2023,3,Series B,51,200,175,https://poolside.ai/careers/member-of-engineering-infrastructure--ade02c95-890f-4f1d-9ca6-05076b6fe687
+1X,"Defense, Aerospace & Robotics",51,2014,12,Series B,201,500,150,https://jobs.ashbyhq.com/1x/8de56770-ec14-4625-a9c4-ee23bffeef60
+Xona,"Defense, Aerospace & Robotics",70,2019,7,Series B,51,200,130,https://jobs.ashbyhq.com/xona-space/e9c15f05-1e25-4c25-ab68-6787ebb0d67b
+Rime,AI & Data,86,2022,4,Series A,11,50,135,https://github.com/hermeticbuild/cuda-toolkit/pull/19
+Four Growers,"Defense, Aerospace & Robotics",-10,2018,8,Series A,11,50,85,https://github.com/bazelbuild/bazel-central-registry/commit/8c5761038905a45f1cf2d1098ba9917a456d20bb.patch
+amo,Consumer & Marketplaces,28,2023,3,Series A,20,30,138,https://amo.co/tech-stack-at-amo/
+Mayhem,Developer Tools & Cloud,-68,2012,14,Series A,11,50,150,https://github.com/bazelbuild/bazel-central-registry/commit/ce2820534d8a3a253f53eae52b1e840f88d16063.patch
+Tecton,AI & Data,-3,2019,7,Series A,51,200,140,https://www.youtube.com/watch?v=Bjaiu8tZZhs
+Vistar Media,Media & Advertising,4,2011,15,Series B,51,200,135,https://bazel.build/community/users#vistar-media
+Perplexity,AI & Data,-17,2022,4,Series B,201,500,220,https://github.com/bazelbuild/bazel-central-registry/commit/96c45dfe9af8d217514348664c8cdc865730989b.patch
+Physical Intelligence,"Defense, Aerospace & Robotics",97,2024,2,Series B,51,200,100,https://jobs.ashbyhq.com/physicalintelligence/f70f9481-ea7e-48e4-9212-f9c10952a028
+Iterable,Enterprise Software,3,2013,13,Series B,501,1000,180,https://job-boards.greenhouse.io/iterable/jobs/8093093
+Brex,Financial Services,11,2017,9,Series B,1000,5000,180,https://bazelcon2025.sched.com/event/28lP3/gradle-backed-dependency-resolution-in-rulesjvmexternal-sridhar-mocherla-brex
+ClickHouse,AI & Data,98,2021,5,Series C,501,1000,180,https://github.com/bazelbuild/bazel-central-registry/commit/d81745500bff37ab1f6f49c3936bc13d927f7b51.patch
+SoundCloud,Media & Advertising,14,2007,19,Series C,201,500,151,https://github.com/bazel-contrib/rules_img/issues/440
+Booking.com,Consumer & Marketplaces,6,1996,30,Series C,10000,10605,150,https://blog.bazel.build/2023/11/23/bazelcon-2023-recap.html
+Cruise,Automotive & Mobility,-15,2013,13,Series C,10000,5000,161,https://www.youtube.com/watch?v=fjfFe98LTm8
+Zipline,"Defense, Aerospace & Robotics",29,2014,12,Series D,1000,5000,155,https://bazelcon2025.sched.com/event/28lP0
+Cerebras Systems,Hardware & Infrastructure,37,2015,11,Series D,501,1000,170,https://jobs.ashbyhq.com/cerebras/ae5daf29-d7d0-440e-b41f-c6f0a67489f3
+Faire,Consumer & Marketplaces,6,2017,9,Series D,1000,5000,150,https://cursor.com/blog/faire
+Revolut,Financial Services,45,2015,11,Series D,14879,19441,140,https://medium.com/revolut/the-fundamentals-of-ios-at-revolut-57422078c903
+Slack,Enterprise Software,1,2009,17,Series D,1000,5000,150,https://www.youtube.com/watch?v=wy3Q38VJ5uQ
+Capital One,Financial Services,9,1994,32,Public,76300,77500,160,https://mattdutton.com/
+Mercari,Consumer & Marketplaces,-2,2013,13,Public,1000,5000,170,https://engineering.mercari.com/en/blog/entry/20221215-16cdd59909/
+Cockroach Labs,Developer Tools & Cloud,0,2015,11,Series C,501,1000,140,https://github.com/cockroachdb/cockroach/blob/master/docs/building.md
+Apple,Hardware & Infrastructure,24,1976,50,Public,166000,168900,185,https://www.youtube.com/watch?v=2Nn71RV_yhI
+Tesla,Automotive & Mobility,22,2003,23,Public,134785,137070,135,https://www.buildbuddy.io/blog/bazelcon/
+AMD,Hardware & Infrastructure,24,1969,57,Public,10000,31000,144,https://github.com/ROCm/hrx-system/commit/228f81c168c41527d4c648481c28cb26b25d1d0e.patch
+10x Genomics,Healthcare & Biotechnology,13,2012,14,Public,1000,5000,170,https://bazelcon2024.sched.com/event/1h6Rx
+Spotify,Media & Advertising,11,2006,20,Public,5000,10000,135,https://engineering.atspotify.com/2023/10/switching-build-systems-seamlessly
+Qualcomm,Hardware & Infrastructure,17,1985,41,Public,52000,54000,150,https://www.qualcomm.com/developer/blog/2024/01/building-external-android-kernel-modules-bazel-kleaf-and-ddk-are-you-ready
+Broadcom,Hardware & Infrastructure,-1,1961,65,Public,33000,37112,130,https://bazelcon2025.sched.com/event/28lOo/automating-software-supply-chain-security-with-bazel-mark-zeren-broadcom-tony-aiuto-datadog
+Grab,Consumer & Marketplaces,9,2012,14,Public,5000,10000,125,https://conf.bazel.build/2020 
+Fractile,Hardware & Infrastructure,113,2022,4,Series B,51,200,143,https://www.liftoffjobs.com/jobs/762e212c-5aa1-4fa3-9df4-51b64c6477c8-developer-operations-devops-bazel-monorepo 
+Arize AI,AI & Data,59,2020,6,Series C,51,200,230,https://jobseek.dev/jobs/4734-devops-release-manager 
+Reveal Technology,"Defense, Aerospace & Robotics",73,2018,8,Series B,51,200,118,https://careers.ballisticventures.com/companies/reveal-technology/jobs/66574691-3d-computer-vision-engineer 
+Optimal Dynamics,AI & Data,-7,2017,9,Series C,51,200,156,https://builtin.com/job/principal-software-engineer-backend/7292663 
+Neuralink,Healthcare & Biotechnology,15,2016,10,Series C,201,500,165,https://wellfound.com/jobs/4243409-software-engineer-ci-cd
+Chalk,AI & Data,91,2021,5,Series A,51,200,185,https://www.linkedin.com/jobs/view/software-engineer-developer-productivity-at-chalk-4450839455/
+Sage Care,Healthcare & Biotechnology,52,2024,2,Series A,11,50,145,https://jobs.ashbyhq.com/sagecare/9f42148e-1913-432b-9b67-03ced405a785?utm_source=gemini
+Intrinsic,"Defense, Aerospace & Robotics",16,2021,5,Series A,51,200,174,https://www.linkedin.com/jobs/view/customer-success-engineer-robotics-software-and-automation-at-intrinsic-4424827505/
