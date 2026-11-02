@@ -287,6 +287,11 @@ select {
   font-weight: 600;
 }
 
+.number-wrap input::placeholder {
+  color: #a0a9a2;
+  font-weight: 400;
+}
+
 .model-note {
   display: flex;
   align-items: flex-start;
@@ -409,6 +414,53 @@ select {
   margin-left: auto;
   color: #44634d;
   font-weight: 700;
+}
+
+.deck-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.deck-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--green);
+  color: white;
+  font: 600 11px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.deck-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+}
+
+.deck-button:focus-visible {
+  outline: 3px solid #a7cfb1;
+  outline-offset: 2px;
+}
+
+.deck-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.deck-button > span {
+  font-size: 15px;
+}
+
+.deck-hint {
+  color: #8a938c;
+  font-size: 9px;
 }
 
 .projection-heading {

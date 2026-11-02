@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { createRoot } from "react-dom/client";
 import { calculate4YearImpact } from "./roiCalculator.js";
+import { downloadExecutiveBriefing } from "./pitchDeck.js";
 
+const React = window.React;
+const { useState } = React;
+const { createRoot } = window.ReactDOM;
 const h = React.createElement;
 const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -46,6 +48,7 @@ function App() {
     headcountLow: "50",
     headcountHigh: "75",
     salary: "180000",
+    companyName: "",
   });
   const validationError = getValidationError(inputs);
   const projection = validationError
@@ -212,6 +215,22 @@ function App() {
           ),
           h(
             "label",
+            { className: "field" },
+            h("span", { className: "field-label" }, "Prospect / company (optional)"),
+            h("span", { className: "number-wrap" },
+              h("input", {
+                name: "companyName",
+                type: "text",
+                maxLength: 80,
+                placeholder: "e.g. Acme, Inc.",
+                value: inputs.companyName,
+                onChange: updateInput("companyName"),
+              }),
+            ),
+            h("span", { className: "field-hint" }, "Personalizes the executive PDF briefing."),
+          ),
+          h(
+            "label",
             { className: "field salary-field" },
             h(
               "span",
@@ -307,6 +326,27 @@ function App() {
                   : "",
               ),
             ),
+          ),
+          h(
+            "div",
+            { className: "deck-action" },
+            h(
+              "button",
+              {
+                className: "deck-button",
+                type: "button",
+                disabled: !yearFour,
+                onClick: () =>
+                  downloadExecutiveBriefing({
+                    companyName: inputs.companyName,
+                    inputs,
+                    projection,
+                  }),
+              },
+              h("span", { "aria-hidden": true }, "↓"),
+              " Download executive pitch deck",
+            ),
+            h("span", { className: "deck-hint" }, "3-page PDF · ready to share"),
           ),
           h(
             "div",
