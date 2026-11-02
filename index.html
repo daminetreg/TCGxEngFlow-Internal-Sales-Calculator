@@ -15,129 +15,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.3.1",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?external=react"
+        }
+      }
+    </script>
     <script type="module" src="./app.js"></script>
   </head>
   <body>
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="EngFlow home">
-        <span class="brand-mark" aria-hidden="true">e</span>
-        <span>engflow<span class="brand-period">.</span></span>
-      </a>
-      <span class="topbar-label">Engineering impact calculator</span>
-    </header>
-
-    <main>
-      <section class="intro">
-        <p class="eyebrow"><span class="eyebrow-line"></span>THE COST OF SLOW FEEDBACK</p>
-        <h1>When engineering<br />friction <span>compounds.</span></h1>
-        <p class="intro-copy">
-          See how growing teams can lose productive time to long build cycles and
-          context switching — and what that friction could cost over four years.
-        </p>
-      </section>
-
-      <section class="calculator" aria-label="ROI calculator">
-        <form class="inputs-panel" id="calculator-form">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">01 / YOUR TEAM</p>
-              <h2>Set your assumptions</h2>
-            </div>
-            <span class="live-indicator"><span></span> LIVE MODEL</span>
-          </div>
-
-          <label class="field">
-            <span class="field-label">Funding stage</span>
-            <span class="select-wrap">
-              <select id="funding-stage" name="fundingStage">
-                <option>Series A &amp; B</option>
-                <option selected>Series C &amp; D</option>
-                <option>Late Stage &amp; Public</option>
-              </select>
-              <span class="select-chevron" aria-hidden="true">⌄</span>
-            </span>
-            <span class="field-hint">Used to estimate annual engineering team growth.</span>
-          </label>
-
-          <fieldset class="field">
-            <legend class="field-label">Starting engineering headcount</legend>
-            <div class="range-fields">
-              <label>
-                <span class="range-label">LOW ESTIMATE</span>
-                <span class="number-wrap">
-                  <input id="headcount-low" name="headcountLow" type="number" min="1" step="1" value="50" required />
-                  <span>devs</span>
-                </span>
-              </label>
-              <span class="range-separator" aria-hidden="true">–</span>
-              <label>
-                <span class="range-label">HIGH ESTIMATE</span>
-                <span class="number-wrap">
-                  <input id="headcount-high" name="headcountHigh" type="number" min="1" step="1" value="75" required />
-                  <span>devs</span>
-                </span>
-              </label>
-            </div>
-            <span class="field-hint">Project a range rather than a single team-size estimate.</span>
-          </fieldset>
-
-          <label class="field salary-field">
-            <span class="field-label">Average fully loaded annual salary</span>
-            <span class="number-wrap salary-wrap">
-              <span aria-hidden="true">$</span>
-              <input id="salary" name="salary" type="number" min="1" step="any" value="180000" required />
-              <span>USD / year</span>
-            </span>
-            <span class="field-hint">Used to translate lost engineering hours into estimated cost.</span>
-          </label>
-
-          <p class="form-error" id="form-error" role="alert" hidden></p>
-          <div class="model-note">
-            <span class="info-icon" aria-hidden="true">i</span>
-            <p>Estimates use the calculator's built-in growth and CI-friction assumptions. Actual outcomes will vary.</p>
-          </div>
-        </form>
-
-        <section class="results-panel" aria-live="polite" aria-label="Four-year projection">
-          <div class="results-heading">
-            <div>
-              <p class="eyebrow">02 / FOUR-YEAR OUTLOOK</p>
-              <h2>Your projected impact</h2>
-            </div>
-            <span class="projection-badge">4 YEAR PROJECTION</span>
-          </div>
-
-          <div class="summary-card">
-            <div class="summary-topline">
-              <span>ESTIMATED ANNUAL PRODUCTIVITY LOSS</span>
-              <span class="summary-year" id="summary-year">YEAR 4</span>
-            </div>
-            <div class="summary-amount" id="summary-amount">$0</div>
-            <div class="summary-range" id="summary-range">Low – high estimate</div>
-            <div class="summary-footer">
-              <span class="summary-icon" aria-hidden="true">↗</span>
-              <span>Annual impact at projected team size</span>
-              <span class="summary-team" id="summary-team"></span>
-            </div>
-          </div>
-
-          <div class="projection-heading">
-            <h3>Impact by year</h3>
-            <span>ANNUAL PRODUCTIVITY LOSS</span>
-          </div>
-          <div class="year-list" id="year-list"></div>
-          <div class="metric-footer">
-            <span><span class="metric-dot"></span> Low estimate</span>
-            <span><span class="metric-dot metric-dot-high"></span> High estimate</span>
-            <span class="metric-explainer">Based on annual lost engineering hours</span>
-          </div>
-        </section>
-      </section>
-
-      <footer class="page-footer">
-        <span>ENGFLOW ENGINEERING IMPACT MODEL</span>
-        <span>Illustrative estimates · Not financial advice</span>
-      </footer>
-    </main>
+    <div id="root">
+      <p role="status">Loading calculator… If this message remains, check your internet connection and reload.</p>
+    </div>
   </body>
 </html>
