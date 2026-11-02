@@ -1,6 +1,6 @@
-# EngFlow 4-Year ROI & Developer Friction Calculator Engine
+# EngFlow 4-Year ROI & Developer Friction Calculator
 
-A zero-dependency, high-performance JavaScript/TypeScript calculation engine designed to quantify the engineering friction and monetized productivity loss caused by the "Build Infrastructure Wall".
+A zero-dependency calculator that estimates engineering friction and monetized productivity loss caused by the "Build Infrastructure Wall." The browser interface runs projections locally using the calculation engine.
 
 The engine uses empirical growth parameters from Ordinary Least Squares (OLS) regression models to project headcount compound growth, quadratic dependency graph complexity, daily context switching penalties, and financial productivity loss over a 4-year time horizon.
 
@@ -17,8 +17,22 @@ The engine uses empirical growth parameters from Ordinary Least Squares (OLS) re
 
 ---
 
-## File Architecture
+## Run the calculator
+
+The app is static and has no build step or package dependencies. Serve the repository root over HTTP so the browser can load the JavaScript modules:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000).
+
+## File architecture
 
 ```text
+├── index.html             # Calculator interface
+├── app.js                 # Browser UI and projection rendering
+├── styles.css             # Responsive application styles
 ├── roiCalculator.js       # Core calculation engine & exported functions
-├── README.md              # Mathematical spec sheet & integration guide
+├── README.md              # Model and usage guide
+└── analysis/              # Source data and model validation
