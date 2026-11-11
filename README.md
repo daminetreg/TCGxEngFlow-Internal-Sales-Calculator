@@ -1,45 +1,71 @@
-# EngFlow 4-Year ROI & Developer Friction Calculator
+# EngFlow CI Economics
 
-A React calculator that estimates engineering friction and monetized productivity loss caused by the "Build Infrastructure Wall." The browser interface runs projections locally using the calculation engine.
+Extension of [Rachel Coutinho's sales calculator](https://github.com/rachel-coutinho/TCGxEngFlow-Internal-Sales-Calculator), adding **Cloud CI** and **On-Prem CI** comparisons against EngFlow on the **same fleet size and core count**.
 
-The engine uses empirical growth parameters from Ordinary Least Squares (OLS) regression models to project headcount compound growth, quadratic dependency graph complexity, daily context switching penalties, and financial productivity loss over a 4-year time horizon.
+The original four-year headcount/productivity model and its executive PDF export remain at `/legacy/index.html`. Its engine is unchanged; a header link returns to the new calculator. Original analysis files are retained in the GitHub fork.
 
----
+## What is included
 
-## Features
+- Build duration, source-file count, programming language and cloud selection.
+- Editable workload, utilization, cache reuse, parallel share, machine capacity and EngFlow investment assumptions.
+- AWS Linux on-demand rates through the public Vantage Instances family API, and selected Azure Linux VM rates from Microsoft's Retail Prices API. Google Cloud and unsupported machines use manual rates.
+- Baseline infrastructure cost, EngFlow infrastructure cost and fees, net annual cash savings, first-year ROI and implementation payback.
+- Finite on-prem fleet throughput, modeled active-build CPU utilization, busy/idle cores, and work versus allocated core-hours.
+- Separate developer-time opportunity, never included in hard-dollar ROI.
+- Browser print / Save as PDF, CSV and JSON exports. Optional browser-only scenario saving; no database or login required.
 
-* **Client-Side Calculations:** Calculates projections in the browser without sending prospect inputs to a server.
-* **Empirical Growth Engine:** Uses statistical OLS regression models (R^2 = 0.1214, p = 0.00214) mapping funding tiers directly to YoY company growth acceleration/deceleration.
-* **Bounded Range Projections:** Evaluates inputs across low and high headcount bounds to output realistic operational ranges.
-* **Executive Briefing Export:** Downloads a three-page, prospect-personalized PDF with the four-year outlook, model assumptions, discussion prompts, and estimate caveats.
-* **Quadratic Complexity Modeling:** Calculates codebase dependency interaction vectors, V = (N(N-1))/2 rather than simple linear headcount scaling.
-* **Cognitive Context Switch Penalty:** Models cognitive friction by adding a 15-minute refocus penalty when CI build times cross the 15-minute feedback loop threshold.
-* **AI Code Volume Multiplier:** Accounts for 1.25 times increased Pull Request (PR) generation volume from modern AI tools (GitHub Copilot, Cursor).
+## Run the enhanced calculator
 
----
-
-## Run the calculator
-
-The app is a static React frontend with no build step. React and ReactDOM are served locally from `vendor/react`; serving the repository root over HTTP is required for JavaScript modules:
+Requires Node.js 24+ and pnpm.
 
 ```sh
-python3 -m http.server 8000
+pnpm install
+pnpm build:calculator
+pnpm start:calculator
 ```
 
-Then open [http://localhost:8000](http://localhost:8000). Modern browsers with ES module support are required. Google Fonts are optional external assets.
+Open `http://localhost:3000`. Set `PORT` to override the default. This starts one Express process serving the built frontend and `/api/pricing`. No credentials are needed.
 
-The current app is a standalone React frontend; CRM authentication, embedding, and prospect-data synchronization are not configured. Those require the target CRM and its integration details.
+In Replit, use the existing managed frontend and API workflows instead; those configure the ports and proxy routing. No separate startup server is needed.
 
-Use the **Download executive pitch deck** button to create a PDF from the current inputs. The export runs locally in the browser and labels the figures as modeled estimates, not guaranteed or recoverable savings.
+```sh
+pnpm test:calculator
+pnpm run typecheck
+```
 
-## File architecture
+The original root static files, when retained by the fork, can still be served independently using Python's HTTP server. The enhanced calculator requires the build above; a static-only host can support manual rates but not the server-side live pricing route.
 
-```text
-├── index.html             # Calculator interface
-├── app.js                 # React UI and projection rendering
-├── pitchDeck.js           # Client-side three-page PDF export
-├── styles.css             # Responsive application styles
-├── roiCalculator.js       # Core calculation engine & exported functions
-├── vendor/react/          # Locally served React runtime and MIT license
-├── README.md              # Model and usage guide
-└── analysis/              # Source data and model validation
+## Model and caveats
+
+**These are scenario estimates, not verified EngFlow benchmark results.** File count and language only suggest editable starting assumptions when the user explicitly applies the heuristic. They do not prove an acceleration factor.
+
+Each representative build occupies one machine. With parallel/cacheable fraction `p`, cache hit rate `h`, baseline active CPU utilization `u0` and target utilization `u1`, the duration ratio is:
+
+```
+ratio = (1 − p) + p × (1 − h) × u0 / u1
+EngFlow duration = baseline duration × ratio
+remaining CPU work = baseline CPU work × (1 − p × h)
+```
+
+The serial share remains unchanged. Overall achieved utilization is derived from work divided by allocated core-hours, not assumed equal to the target. Capacity is whole builds per machine within the daily operating window. Cost comparisons use the same completed workload, capped by both fleets' modeled capacity. Excess demand is flagged, not counted as unlimited savings.
+
+For autoscaling cloud machines, billed hours are matched builds × duration. Fixed cloud fleets retain the same annual infrastructure cost. On-prem annual cost includes hardware amortization, power at the entered draw for the powered-on window, and operations; both sides retain the same cost. More on-prem throughput is **not** automatically cash savings.
+
+```
+Recurring net cash savings = baseline infra − EngFlow infra − annual EngFlow fee
+First-year net cash savings = recurring net cash savings − implementation cost
+First-year hard ROI = first-year net cash savings / (annual fee + implementation cost)
+Payback months = implementation cost / recurring net cash savings × 12
+```
+
+ROI is undefined when investment is zero. Payback is unavailable when recurring cash savings are non-positive. Negative ROI is shown without suppression. Productivity value is estimated from the blocked share of matched build-time reductions, assuming one developer per build; recovery is capped at the team's annual working hours.
+
+**Not modeled:** queueing, cache storage/egress, CI platform fees, orchestration overhead, workload variation, minimum cloud billing increments, contract discounts or taxes. Include applicable costs in the entered EngFlow annual quote. Validate performance with representative build traces and a pilot before using modeled ROI for a purchasing decision.
+
+## Pricing provenance and privacy
+
+AWS uses `https://instances-api.vantage.sh/api/v1/instances/ec2/families/{family}/global`. Azure uses `https://prices.azure.com/api/retail/prices`. Supported Azure names are Standard_F{2,4,8,16,32,64}s_v2 and Standard_D{2,4,8,16,32,64}s_v5.
+
+Only provider, region and instance type are sent for price lookup. Responses identify the source, retrieval time and currency. Six-hour server caching limits external requests; the retrieval timestamp is not a guarantee of the provider's price-effective date. Errors are shown explicitly and manual rates remain available. Default rates and fees are illustrative, not an EngFlow quote.
+
+Prospect inputs are calculated locally. Optional persistence uses this browser's local storage only. Exported reports may contain entered prospect assumptions; share them accordingly.
